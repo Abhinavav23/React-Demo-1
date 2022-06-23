@@ -1,10 +1,21 @@
+import Heading from './Heading';
+import Searchbar from './Serchbar';
+
 export default function Header(){
     return (
-        <header>
-            <h2>This is my First Project</h2>
-            <h1>This is my second Project</h1>
-        </header>
+    <header>
+        <Heading/>
+        <nav>
+            <ul>
+                <li><a href='#'>Home</a></li>
+                <li><a href='#'>Products</a></li>
+                <li><a href='#'>Login</a></li>
+            </ul>
+            <Searchbar/>
+        </nav>
+    </header>
     )
 }
+
 
 // jsx ---> javascript and XML

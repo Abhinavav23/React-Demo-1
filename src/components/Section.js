@@ -1,10 +1,10 @@
-import Header from "./Header"
+import Product from "./Product"
 
 export default function Section(){
     return(
        <div>
-            <Header></Header>
-            <section>This is a section</section>
+            {/* <section>This is a section</section> */}
+            <Product/>
        </div>
     )
 }

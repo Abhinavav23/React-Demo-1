@@ -1,20 +1,22 @@
 import './App.css';
-import Cart from './components/Cart';
-import Header from './components/Header';
-import Section from './components/Section';
+
+// import Abhinav from './components/Heading';
+
+import * as Heading from './components/Heading';
+
+import { Heading1, Heading2 } from './components/Heading';
 
 export function App1() {
   return (
     <section className="App">
-      <h1>React</h1>
-      {/* <Header></Header> */}
-      {/* self closing tag */}
-      {/* opening and closing tag */}
-      <Section></Section>
-      {/* <Section/> */}
+      {/* <Abhinav/> */}
+      <Heading.Heading1/>
+      <Heading.Heading2/>
 
-      <br/>
-      <Cart/>
+      <Heading1/>
+      <Heading2/>
+      {/* <Heading/> */}
+     
     </section>
   );
 }
