@@ -1,10 +1,8 @@
-import Heading from './Heading';
 import Searchbar from './Serchbar';
 
 export default function Header(){
     return (
     <header>
-        <Heading/>
         <nav>
             <ul>
                 <li><a href='#'>Home</a></li>

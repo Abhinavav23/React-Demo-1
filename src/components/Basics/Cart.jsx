@@ -1,4 +1,4 @@
-import Header from "./Header"
+import Header from "../Props/Header"
 export default function Cart(){
     let YourTotal  = 15000
     return (
