@@ -2,6 +2,11 @@ import './App.css';
 import Header from './components/HousingProcuct/Header/Header';
 import Product from './components/HousingProcuct/Product';
 import Title from './components/HousingProcuct/Title';
+import { Wraper } from './components/HousingProcuct/Wraper';
+import { MainArea, Wrapper1 } from './components/HousingProcuct/MainArea';
+import ChildrenProps from './components/HousingProcuct/ChildrenProps';
+import { Person } from './components/Person/Person';
+
 
 // import Abhinav from './components/Heading';
 
@@ -19,7 +24,11 @@ export function App1() {
     city: 'Delhi'
   }
 
-  const caller = () => 10
+  const caller = () => {
+    console.log('fun called');
+  }
+
+  const arr = [25,56]
   return (
     // <section className="App">
     //   {/* <Abhinav/> */}
@@ -33,15 +42,68 @@ export function App1() {
       <Header/>
       <Title/>
 
-      <Product name="Queen Panel Bed" type="HouseHold" rating={4} price={2500} image="https://image.js" available {...userInfo} {...address}/>
+      {/* <Product name="Queen Panel Bed" type="HouseHold" rating={4} price={2500} image="https://image.js" available/>
       <br/>
       <Product name="Dresser" type="FURNITURE" rating="3" price="3200" image="./prodcut1.jpg"/>
       <br/>
-      <Product name="Queen Panel Bed" type="HouseHold" rating="4" price="2500" image="##"/>
+      <Product name="Queen Panel Bed" type="HouseHold" rating="4" price="2500" image="##"/> */}
+
+    {/* <Wraper userinfo={userInfo} nums={arr} fun={caller}/> */}
+      <br/>
+    {/* <Wraper obj={{username: "sonu", role: "learner"}} nums={[1,2,3,45]} fun={()=>console.log('pasing fun')}/> */}
+
+    {/* <MainArea name='Something' {...userInfo}/> */}
+
+
+      {/* <ChildrenProps name="Sahbaz">
+        <div>
+        <p>This is a pargraph 1</p>
+        </div>
+
+        <div>
+        <p>This is a pargraph 2</p>
+        </div>
+
+        <p>test</p>
+
+      </ChildrenProps>
+
+      <ChildrenProps name="abhinav">
+        <div>
+        <p>This is a pargraph 3</p>
+        </div>
+      </ChildrenProps>
+
+      <ChildrenProps name="abhinav">
+        <MainArea username="user" name="anything"/>
+      </ChildrenProps> */}
+
+      <Person name="Abhinav" add="Delhi" gen="Male"/>
+      <br/>
+      <Person name="Sonu" add="Gaya" gen="Male"/>
+
     </>
   );
 }
-<div id="2" class="test"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <div id="2" class="test"></div> */}
 
 {/* <div>
   something
@@ -62,18 +124,22 @@ export function App1() {
 // 1. available = {true} 
 // 2. available 
 
-let obj1 = {
-  name: 'abhinav'
-}
+// let obj1 = {
+//   name: 'abhinav'
+// }
 
-let obj2 = {
-  name: 'abhinav'
-}
+// let obj2 = {
+//   name: 'abhinav'
+// }
 
 
-let obj = {
-  name: 'abhinav',
-  add: 'dfvdfv',
-  age: 324234,
-  name:'Ram'
-}
+// let obj = {
+//   name: 'abhinav',
+//   add: 'dfvdfv',
+//   age: 324234,
+//   name:'Ram'
+// }
+// let arr= [1,4,5,7]
+
+// console.log(...arr);
+
