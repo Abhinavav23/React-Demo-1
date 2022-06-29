@@ -13,3 +13,12 @@ export const Person = (props) => {
     </>
   )
 }
+
+
+// function calculator(a,b){
+//     let x = 10;
+//     return a+b+x
+// }
+// console.log(x);
+// calculator(2,5) //16
+// calculator(2,66) 

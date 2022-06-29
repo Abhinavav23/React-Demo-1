@@ -6,6 +6,7 @@ import { Wraper } from './components/HousingProcuct/Wraper';
 import { MainArea, Wrapper1 } from './components/HousingProcuct/MainArea';
 import ChildrenProps from './components/HousingProcuct/ChildrenProps';
 import { Person } from './components/Person/Person';
+import { StateExample } from './components/States/StateExample';
 
 
 // import Abhinav from './components/Heading';
@@ -78,9 +79,16 @@ export function App1() {
         <MainArea username="user" name="anything"/>
       </ChildrenProps> */}
 
-      <Person name="Abhinav" add="Delhi" gen="Male"/>
+      {/* <Person name="Abhinav" add="Delhi" gen="Male"/>
       <br/>
-      <Person name="Sonu" add="Gaya" gen="Male"/>
+      <Person name="Sonu" add="Gaya" gen="Male"/> */}
+
+      <StateExample/>
+      <br/>
+      {/* <StateExample/> */}
+      {/* <StateExample/>
+      <StateExample/>
+      <StateExample/> */}
 
     </>
   );
