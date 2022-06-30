@@ -10,17 +10,33 @@ export const Counter = () => {
     const incrementby5 = () => {
 
         //async func
-        setCount((val) => val+1);  //1
-        setCount((val) => val+2); 
-        setCount((val) => val+3); 
-        setCount((val) => val+4); 
-        setCount((val) => val+5); 
+        // (val) => val+1
+        // updating the state based on previous state
+
+        setCount((previousState) => previousState+10);  //1
+        setCount((previousState) => previousState+2);  //1
+        setCount((previousState) => previousState+3);  //1
+        setCount((previousState) => previousState+4);  //1
+        setCount((previousState) => previousState+5);  //1
 
 
+        // setCount(count+1);
         // setCount(count+2); //3
         // setCount(count+3); //6
         // setCount(count+4); //10
-        setCount(count+5); //15
+        // setCount(count+5); //15
+
+
+        // setCount(count+1);
+        // setCount(count+1); //3
+        // setCount(count+1); //6
+        // setCount(count+1); //10
+        // setCount(count+1); //15
+
+
+        // for(let i=0;i<5;i++){
+
+        // }
 
         console.log(count);
 

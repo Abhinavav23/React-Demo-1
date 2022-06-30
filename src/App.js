@@ -10,6 +10,9 @@ import { StateExample } from './components/States/StateExample';
 import { StateExampleRefType } from './components/States/StateExampleRefType';
 import { ChildToParent } from './components/ChildToParent';
 import { Counter } from './components/Counter';
+import { Parent } from './components/LiftingTheStates/Parent/Parent';
+import { ParentAgain } from './components/LiftingTheStates/Parent2/ParentAgain';
+import { ProductList } from './components/List/ProductList';
 
 
 // import Abhinav from './components/Heading';
@@ -35,6 +38,8 @@ export function App1() {
   const print = (userInfo) => {
     console.log(`My name is ${userInfo.name}, and address is ${userInfo.address}, and role is ${userInfo.role}`);
   }
+
+  let name="Abhinav"
 
   const arr = [25,56]
   return (
@@ -98,7 +103,11 @@ export function App1() {
 
       {/* <ChildToParent name="Abhinav" print={print}/> */}
 
-      <Counter/>
+      {/* <Counter/> */}
+      {/* <Parent name={name}/>
+      <ParentAgain name={name}/> */}
+
+      <ProductList/>
 
     </>
   );
@@ -159,7 +168,7 @@ export function App1() {
 // }
 // let arr= [1,4,5,7]
 
-// console.log(...arr);
+// console.log(...arr);̀
 
 
 
@@ -168,3 +177,6 @@ function calculator(a,b){
 }
 
 calculator(200,6565)
+
+
+
