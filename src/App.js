@@ -7,6 +7,9 @@ import { MainArea, Wrapper1 } from './components/HousingProcuct/MainArea';
 import ChildrenProps from './components/HousingProcuct/ChildrenProps';
 import { Person } from './components/Person/Person';
 import { StateExample } from './components/States/StateExample';
+import { StateExampleRefType } from './components/States/StateExampleRefType';
+import { ChildToParent } from './components/ChildToParent';
+import { Counter } from './components/Counter';
 
 
 // import Abhinav from './components/Heading';
@@ -27,6 +30,10 @@ export function App1() {
 
   const caller = () => {
     console.log('fun called');
+  }
+
+  const print = (userInfo) => {
+    console.log(`My name is ${userInfo.name}, and address is ${userInfo.address}, and role is ${userInfo.role}`);
   }
 
   const arr = [25,56]
@@ -55,7 +62,6 @@ export function App1() {
 
     {/* <MainArea name='Something' {...userInfo}/> */}
 
-
       {/* <ChildrenProps name="Sahbaz">
         <div>
         <p>This is a pargraph 1</p>
@@ -70,9 +76,7 @@ export function App1() {
       </ChildrenProps>
 
       <ChildrenProps name="abhinav">
-        <div>
         <p>This is a pargraph 3</p>
-        </div>
       </ChildrenProps>
 
       <ChildrenProps name="abhinav">
@@ -83,12 +87,18 @@ export function App1() {
       <br/>
       <Person name="Sonu" add="Gaya" gen="Male"/> */}
 
-      <StateExample/>
+      {/* <StateExample/> */}
       <br/>
       {/* <StateExample/> */}
       {/* <StateExample/>
       <StateExample/>
       <StateExample/> */}
+
+      {/* <StateExampleRefType/> */}
+
+      {/* <ChildToParent name="Abhinav" print={print}/> */}
+
+      <Counter/>
 
     </>
   );
@@ -151,3 +161,10 @@ export function App1() {
 
 // console.log(...arr);
 
+
+
+function calculator(a,b){
+
+}
+
+calculator(200,6565)

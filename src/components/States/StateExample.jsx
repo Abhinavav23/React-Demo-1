@@ -23,7 +23,8 @@ export const StateExample = () => {
     }
 
     const decrement=() => {
-        count=count-1
+        // count=count-1
+        setCount(count-1)
         console.log(count);
     }
 
