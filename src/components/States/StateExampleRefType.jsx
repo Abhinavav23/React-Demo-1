@@ -18,7 +18,7 @@ export const StateExampleRefType = () => {
         console.log("before",numbers); //[1,2,3]
         numbers.push(numbers[numbers.length-1]+1) // numbers[2]
         console.log("after",numbers);//[1,2,3,4]
-        // this wont work becoz newNum will have same ref os numbers
+        // this wont work becoz newNum will have same ref as numbers
         // let newNum = numbers
         setNumbers([...numbers]);
     }

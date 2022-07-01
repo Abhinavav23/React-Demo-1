@@ -1,51 +1,113 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Product } from './Product'
 
 export const ProductList = () => {
     let productList = [
     {
+        id: "1",
         name: 'Queen Panel bed',
         price: 2000,
-        quantity: 10
+        quantity: 10,
+        instock: true
     },
     {
+        id: "2",
         name: 'King Panel bed',
         price: 2500,
-        quantity: 14
+        quantity: 14,
+        instock: false
     },
     {
+        id: "3",
         name: 'Single bed',
         price: 200,
-        quantity: 7
+        quantity: 7,
+        instock: false
     },
     {
+        id: "4",
         name: 'Dresser',
         price: 200,
-        quantity: 15
+        quantity: 15,
+        instock: true
     },
     {
+        id: "5",
         name: 'Double Panel bed',
         price: 205,
-        quantity: 4
+        quantity: 4,
+        instock: true
     }
 ]
 
+let [product, setProduct] = useState(productList)
+
+function renderList(){
+    let arr = []
+    // productList.forEach(el => {
+    //     arr.push(<Product name={el.name} price={el.price} quantity={el.quantity}/>)
+    // });
+    for(let i=0; i<productList.length;i++){
+        arr.push(<Product name={productList[i].name} price={productList[i].price} quantity={productList[i].quantity}/>)
+    }
+    return arr
+}
+
+function deleteItem(e){
+    console.log(e.target.id);
+    let updatedList = product.filter((el)=> e.target.id!==el.id)
+    // updating the same array and passing to setProduct wont work 
+    console.log('deleted');
+    console.log(updatedList);
+    setProduct(updatedList);
+}
+
+function AddItem(){
+    product.push({id: product[product.length-1].id+1+'',
+    name: 'new item',
+    price: 205,
+    quantity: 4,
+    instock: true})
+    console.log(product);
+
+    setProduct([...product])
+}
 
   return (
     <>
     <div>ProductList</div>
     <br/>
     <section>
-       { productList.map((el,index) => {
-           return (
-               <>
-               <Product name={el.name} price={el.price} quantity={el.quantity}/>
+       { product.map((el) => 
+            (
+               <div className='wrapper' key={el.id}>
+               <Product name={el.name} price={el.price} quantity={el.quantity} available={el.instock}/>
+               <button onClick={(e) => deleteItem(e)} id={el.id}>Delete</button>
                 <br/>
-               </>
+               </div>
            )
-       })}
+       )}
+
+       {/* {renderList()} */}
+
+       {/* {
+           (function(){
+            let arr = []
+            // productList.forEach(el => {
+            //     arr.push(<Product name={el.name} price={el.price} quantity={el.quantity}/>)
+            // });
+            for(let i=0; i<productList.length;i++){
+                arr.push(<Product name={productList[i].name} price={productList[i].price} quantity={productList[i].quantity}/>)
+            }
+            return arr
+            })()
+       } */}
 
        {/* {[val,val,val]} */}
+       <br/>
+       <input type="text" />
+       <input type="text" />
+       <button onClick={AddItem}>Add Item</button>
     </section>
     </>
   )
@@ -71,7 +133,7 @@ export const ProductList = () => {
 <div>Qunatity: {props.quantity}</div>
 </>, */}
 
-
+// [
 // <Product name="Queen Panel bed"/>
 // <Product name="Queen Panel bed"/>
 // <Product name="Queen Panel bed"/>
@@ -85,3 +147,20 @@ export const ProductList = () => {
 
 
 // let a = a+b+c
+
+
+// convention
+// private---> _varName
+// global ---> __varName
+
+// function printName(){
+//     let _name = 'Abhinav'
+//     console.log(`My name is ${name}`);
+// }
+// printName()
+
+
+
+// function test(){
+
+// }
