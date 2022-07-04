@@ -21,7 +21,7 @@ import { ProductList } from './components/List/ProductList';
 
 // import { Heading1, Heading2 } from './components/Heading';
 
-export function App1() {
+export default function App1() {
   let userInfo = {
     username: 'Abhinav', 
     role: 'Instaructor'
@@ -172,11 +172,11 @@ export function App1() {
 
 
 
-function calculator(a,b){
+// function calculator(a,b){
 
-}
+// }
 
-calculator(200,6565)
+// calculator(200,6565)
 
 
 

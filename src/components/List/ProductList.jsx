@@ -62,6 +62,14 @@ function deleteItem(e){
     setProduct(updatedList);
 }
 
+function BuyProduct(e){
+    console.log('buying');
+    // first find the elemnt using the id
+    // update the quantity of that element
+    // create a copy of the list with updated quanity
+    // rerender by updating the state 
+}
+
 function AddItem(){
     product.push({id: product[product.length-1].id+1+'',
     name: 'new item',
@@ -81,8 +89,12 @@ function AddItem(){
        { product.map((el) => 
             (
                <div className='wrapper' key={el.id}>
-               <Product name={el.name} price={el.price} quantity={el.quantity} available={el.instock}/>
+               <Product name={el.name} price={el.price} quantity={el.quantity} available={el.instock} id={el.id}/>
+               <Product {...el}/>
+               <Product element={el}/>
                <button onClick={(e) => deleteItem(e)} id={el.id}>Delete</button>
+               <button onClick={(e) => BuyProduct(e)} id={el.id}>Buy</button>
+                <br/>
                 <br/>
                </div>
            )
