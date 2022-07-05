@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import { ConditionalReturns } from './ComponentsV1/ConditionalReturns'
+import './AppV1.css'
+import { InlineStyles } from './ComponentsV1/InlineStyles';
+import { ModuleCssComp } from './ComponentsV1/ModuleCssComp';
+import { ModuleCssCompOne } from './ComponentsV1/ModuleCssComp1';
 
 const AppV1 = () => {
     const [theme, setTheme] = useState(true);
@@ -12,11 +16,17 @@ const AppV1 = () => {
 
   return (
       <>
-        <h2>Rendering AppV1</h2>
-        <div>Theme: {theme ? '1': '2'}</div>
-        <ConditionalReturns theme={theme}/>
+        {/* <h2>Rendering AppV1</h2>
+        <div>Theme: {theme ? '1': '2'}</div> */}
+        {/* <ConditionalReturns theme={theme}/> */}
+        
         <br/>
-        <button onClick={toggle}>Switch to older version</button>
+        {/* <button onClick={toggle}>Switch to older version</button> */}
+
+        {/* <InlineStyles/> */}
+
+        <ModuleCssComp/>
+        <ModuleCssCompOne/>
       </>
   )
 }

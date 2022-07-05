@@ -1,0 +1,17 @@
+.theme1{
+    color: rgb(174, 19, 19);
+    background-color: #ddd
+}
+.theme2{
+    color: rgb(53, 174, 19);
+    background-color: rgb(48, 45, 45)
+}
+
+.theme1Font{
+    font-size: large;
+    font-weight: 800;
+}
+
+.traditional{
+    color: rgba(15, 15, 152, 0.9)
+}
