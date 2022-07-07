@@ -5,6 +5,8 @@ import { InlineStyles } from './ComponentsV1/InlineStyles';
 import { ModuleCssComp } from './ComponentsV1/ModuleCssComp';
 import { ModuleCssCompOne } from './ComponentsV1/ModuleCssComp1';
 import { Form1 } from './Forms/Form1';
+import { Form2 } from './Forms/Form2';
+import { Form3 } from './Forms/Form3';
 
 const AppV1 = () => {
     const [theme, setTheme] = useState(true);
@@ -28,7 +30,9 @@ const AppV1 = () => {
 
         {/* <ModuleCssComp/>
         <ModuleCssCompOne/> */}
-        <Form1/>
+        {/* <Form1/> */}
+        {/* <Form2/> */}
+        <Form3/>
       </>
   )
 }

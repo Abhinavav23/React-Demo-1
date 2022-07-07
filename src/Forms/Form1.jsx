@@ -17,6 +17,8 @@ export const Form1 = () => {
         email: ''
     })
 
+    console.log('rendering');
+
     // const handleName = (e) => {
     //     userInfo.name=e.target.value
     //     console.log(e.target.id);
@@ -63,7 +65,8 @@ export const Form1 = () => {
         <input id='email' type="email" onChange={(e) => handleUser(e)}/>
         <br/> <br/>
         {/* <button>Submit</button> */}
-        <input type="submit" />
+        {/* <input type="submit" /> */}
+        <button>submit</button>
     </form>
     <br/>
    {showDetails && (<section>
@@ -104,9 +107,9 @@ function getObjProperty(propertyName){
     console.log(obj[propertyName]);
 }
 
-getObjProperty('name')
-getObjProperty('address')
-getObjProperty('myaddress') //obj.myaddress-->undefined
+// getObjProperty('name')
+// getObjProperty('address')
+// getObjProperty('myaddress') //obj.myaddress-->undefined
 
 
 
