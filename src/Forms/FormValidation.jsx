@@ -18,13 +18,8 @@ export const FormValidation = () => {
     }
 
     const [signUpValidation, setSignupValidation] = useState(initialValue)
-    const [signUpValidationerror, setSignupValidationError] = useState({
-        usernameError: "",
-        emailError: "",
-        passwordError: "",
-        confirmPasswordError: ""
-    })
 
+    const [signUpValidationerror, setSignupValidationError] = useState(initialErrorValue)
 
     const userNameValidator = () => {
         if(signUpValidation.username === ""){
@@ -37,7 +32,10 @@ export const FormValidation = () => {
     }
 
     const emailValidator = () => {
-        
+        // should not be empty
+        // min lemgth 
+        // should have @ symbol ---> searching
+
         if(signUpValidation.username === ""){
             setSignupValidationError({...signUpValidationerror, usernameError: "Please enter username"})
         } else if(signUpValidation.username.length < 6){
@@ -46,6 +44,12 @@ export const FormValidation = () => {
             setSignupValidationError(initialErrorValue)
         }
     }
+
+    // Password validator
+    // should not be empty
+    // min lemgth & max length
+    // should be same as password --> confirm password
+    
 
     const submitHandler = (e) => {
         e.preventDefault()
@@ -65,6 +69,7 @@ export const FormValidation = () => {
         placeholder='username'
         value={signUpValidation.username}
         onChange={(e) => handleUserInputChange(e)}/>
+
        <div className={Style.error}>{signUpValidationerror.usernameError}</div>
 
         <label htmlFor="email">Email: </label>
@@ -73,7 +78,8 @@ export const FormValidation = () => {
         placeholder='email'
         value={signUpValidation.email}
         onChange={(e) => handleUserInputChange(e)}/>
-          <div className={Style.error}>{signUpValidationerror.emailError}</div>
+
+        <div className={Style.error}>{signUpValidationerror.emailError}</div>
 
         <label htmlFor="password">Password: </label>
         <input type="password" 
@@ -81,7 +87,8 @@ export const FormValidation = () => {
         value={signUpValidation.password}
         placeholder='password'
         onChange={(e) => handleUserInputChange(e)}/>
-          <div className={Style.error}>{signUpValidationerror.passwordError}</div>
+
+        <div className={Style.error}>{signUpValidationerror.passwordError}</div>
 
         <label htmlFor="confirmPassword">Confirm Password: </label>
         <input type="password" 
@@ -89,7 +96,8 @@ export const FormValidation = () => {
         value={signUpValidation.confirmPassword}
         placeholder='confirm password'
         onChange={(e) => handleUserInputChange(e)}/>
-          <div className={Style.error}>{signUpValidationerror.confirmPasswordError}</div>
+
+        <div className={Style.error}>{signUpValidationerror.confirmPasswordError}</div>
         <br/>
         <button>sign up</button>
     </form>
