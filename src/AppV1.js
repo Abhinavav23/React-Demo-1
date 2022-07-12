@@ -10,6 +10,7 @@ import { Form3 } from './Forms/Form3';
 import { FormValidation } from './Forms/FormValidation';
 import { FormValidationV2 } from './Forms/FormValidationV2';
 import FirstClassComponent from './ClassComponents/FirstClassComponent';
+import ComponentOne from './ClassComponents/Lifecycle/Phase1/ComponentOne';
 
 const AppV1 = () => {
     const [theme, setTheme] = useState(true);
@@ -37,9 +38,12 @@ const AppV1 = () => {
         {/* <Form2/> */}
         {/* <Form3/> */}
         {/* <FormValidation/> */}
-        <FormValidationV2/>
+        {/* <FormValidationV2/> */}
 
-        <FirstClassComponent/>
+        {/* <FirstClassComponent/> */}
+
+        <ComponentOne name="Abhinav" address="Delhi"/>
+        <ComponentOne name="Manish" address="Bangalore"/>
       </>
   )
 }
