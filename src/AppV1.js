@@ -10,7 +10,9 @@ import { Form3 } from './Forms/Form3';
 import { FormValidation } from './Forms/FormValidation';
 import { FormValidationV2 } from './Forms/FormValidationV2';
 import FirstClassComponent from './ClassComponents/FirstClassComponent';
-import ComponentOne from './ClassComponents/Lifecycle/Phase1/ComponentOne';
+import ComponentOne from './ClassComponents/Lifecycle/ComponentOne';
+import StateExample from './ClassComponents/Lifecycle/States/StateExample';
+import Lifecycle from './ClassComponents/Lifecycle/Phase1/Lifecycle';
 
 const AppV1 = () => {
     const [theme, setTheme] = useState(true);
@@ -42,8 +44,13 @@ const AppV1 = () => {
 
         {/* <FirstClassComponent/> */}
 
-        <ComponentOne name="Abhinav" address="Delhi"/>
-        <ComponentOne name="Manish" address="Bangalore"/>
+        {/* <ComponentOne name="Abhinav" address="Delhi"/> */}
+        {/* <ComponentOne name="Manish" address="Bangalore"/> */}
+
+
+        {/* <StateExample/> */}
+
+        <Lifecycle/>
       </>
   )
 }

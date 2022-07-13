@@ -13,11 +13,11 @@ export const Counter = () => {
         // (val) => val+1
         // updating the state based on previous state
 
-        setCount((previousState) => previousState+10);  //1
-        setCount((previousState) => previousState+2);  //1
-        setCount((previousState) => previousState+3);  //1
-        setCount((previousState) => previousState+4);  //1
-        setCount((previousState) => previousState+5);  //1
+        setCount((previousState) => previousState+10);  //10
+        setCount((previousState) => previousState+2);  //12
+        setCount((previousState) => previousState+3);  //15
+        setCount((previousState) => previousState+4);  //19
+        setCount((previousState) => previousState+5);  //24
 
 
         // setCount(count+1);

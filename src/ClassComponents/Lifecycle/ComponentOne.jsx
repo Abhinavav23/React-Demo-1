@@ -13,9 +13,6 @@ export default class ComponentOne extends Component {
         console.log(this.state);
     }
 
-    name = 'abhinav'
-
-
     // this.setState()
 
     // const [name, abhinav] = useState()
@@ -38,9 +35,9 @@ export default class ComponentOne extends Component {
         <div>Name: {this.props.name}</div>
         <div>Address: {this.props.address}</div>
         {/* 2nd approach */}
-        <button onClick={() => this.printName()}>printMyName</button>
+        {/* <button onClick={() => this.printName()}>printMyName</button> */}
         {/* 3rd approach */}
-        <button onClick={this.printName.bind(this)}>printMyName</button>
+        {/* <button onClick={this.printName.bind(this)}>printMyName</button> */}
         <button onClick={this.printName}>printMyName</button>
       </>
     )
@@ -65,7 +62,9 @@ export default class ComponentOne extends Component {
 //     constructor(name, add, game){
 //         super(name, add)
 //         this.game = game
+
 //     }
+// this.myname
 // }
 
 // new Person("Abhinav", "Delhi")
@@ -94,3 +93,15 @@ export default class ComponentOne extends Component {
 //     this.printName()
 // }
 
+
+// var employee = {
+//     name: '',
+//     adress: ''
+// }
+
+// delete employee.name
+
+// var emp = Object.create()
+
+// Object.defineProperties(employee, "name", {configurable: false})
+// delete employee.name
