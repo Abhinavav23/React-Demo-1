@@ -5,13 +5,15 @@ export default class ComponentOne extends Component {
         super(props)
         // this.printName = this.printName.bind(this)
         this.state = {
-            name: '',
+            name: this.props.name + 'Sometitle',
             addRess: '',
             numbers: [],
             instaructor: true
         }
         console.log(this.state);
     }
+
+    // this.state.name = 'Abhinav sometitile'
 
     // this.setState()
 

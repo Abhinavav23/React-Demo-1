@@ -13,6 +13,9 @@ import FirstClassComponent from './ClassComponents/FirstClassComponent';
 import ComponentOne from './ClassComponents/Lifecycle/ComponentOne';
 import StateExample from './ClassComponents/Lifecycle/States/StateExample';
 import Lifecycle from './ClassComponents/Lifecycle/Phase1/Lifecycle';
+import LifecycleMethod from './ClassComponents/Lifecycle/Phase2/LifecycleMethod';
+import Component1 from './ClassComponents/Lifecycle/Component1';
+import Component2 from './ClassComponents/Lifecycle/Component2';
 
 const AppV1 = () => {
     const [theme, setTheme] = useState(true);
@@ -22,6 +25,9 @@ const AppV1 = () => {
         // theme= false
         console.log(theme);
     }
+
+    const [myName, setName] = useState('Abhinav');
+    // let name = 'Abhinav'
 
   return (
       <>
@@ -44,13 +50,18 @@ const AppV1 = () => {
 
         {/* <FirstClassComponent/> */}
 
-        {/* <ComponentOne name="Abhinav" address="Delhi"/> */}
+        {/* <ComponentOne name="test" address="Delhi"/> */}
         {/* <ComponentOne name="Manish" address="Bangalore"/> */}
 
 
         {/* <StateExample/> */}
 
-        <Lifecycle/>
+        {/* <Lifecycle/> */}
+
+        {/* <LifecycleMethod name={myName}/>
+        <button onClick={() =>setName('Sonu')}>update Name</button> */}
+        <Component1/>
+        <Component2/>
       </>
   )
 }

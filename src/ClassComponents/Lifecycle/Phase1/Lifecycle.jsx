@@ -26,7 +26,7 @@ export default class Lifecycle extends Component {
             name: this.props.name+' some title'
         }
     }
-    
+
     updateNAme = () => {
 
     }
@@ -39,7 +39,6 @@ export default class Lifecycle extends Component {
     // any [side-effect] is not allowed
     render() {
         console.log('render getting called' );
-        
         return (
             <div>Lifecycle</div>
         )
