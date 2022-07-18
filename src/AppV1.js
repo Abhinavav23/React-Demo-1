@@ -16,6 +16,7 @@ import Lifecycle from './ClassComponents/Lifecycle/Phase1/Lifecycle';
 import LifecycleMethod from './ClassComponents/Lifecycle/Phase2/LifecycleMethod';
 import Component1 from './ClassComponents/Lifecycle/Component1';
 import Component2 from './ClassComponents/Lifecycle/Component2';
+import ExmapleOfMethods from './ClassComponents/Lifecycle/Phase2/ExmapleOfMethods';
 
 const AppV1 = () => {
     const [theme, setTheme] = useState(true);
@@ -27,6 +28,10 @@ const AppV1 = () => {
     }
 
     const [myName, setName] = useState('Abhinav');
+
+    const [show, setShow] = useState(true);
+
+
     // let name = 'Abhinav'
 
   return (
@@ -60,8 +65,13 @@ const AppV1 = () => {
 
         {/* <LifecycleMethod name={myName}/>
         <button onClick={() =>setName('Sonu')}>update Name</button> */}
-        <Component1/>
-        <Component2/>
+        {/* {show && <Component1/>} */}
+        {/* <button onClick={() => setShow(!show)}>toggle</button> */}
+        {/* <Component2/> */}
+
+
+        <ExmapleOfMethods firstName={myName}/>
+        <button onClick={() => setName('Sonu 111')}>update Name</button>
       </>
   )
 }

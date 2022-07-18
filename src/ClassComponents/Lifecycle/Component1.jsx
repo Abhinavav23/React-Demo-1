@@ -18,7 +18,13 @@ export default class Component1 extends Component {
             this.setState({
                 count: 1
             })
-        }, 1000)
+        }, 5000)
+    }
+
+
+    // 
+    componentWillUnmount(){
+        console.log('removing component');
     }
 
     componentDidUpdate(){
@@ -36,3 +42,6 @@ export default class Component1 extends Component {
         )
     }
 }
+
+// unmounting phase ---> the compoents gets removed from the DOM
+// 1. componentWillUnmount

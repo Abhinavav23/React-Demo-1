@@ -21,6 +21,7 @@ export default class LifecycleMethod extends Component {
     // used for performanace optimization
     // if return true it will go ahead and run further methods 
     // but if we return false it wont go ahead
+    
     shouldComponentUpdate( props, state ){
         console.log('rendering shouldComponentUpdate');
         // if(this.props.name === 'Sonu'){
@@ -84,3 +85,20 @@ export default class LifecycleMethod extends Component {
 // 3. render
 // 4. getSnapshotBeforeUpdate
 // 5. componentDidUpdate
+
+
+// constructor(){
+//     this.state = {
+//         time: 0
+//     }
+// }
+
+// componentDidMount(){
+//     this.setState({
+//         count: new Date()
+//     })
+// }
+
+// componentDidUpdate(){
+//     setInterval
+// }
