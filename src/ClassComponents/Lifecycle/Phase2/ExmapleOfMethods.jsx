@@ -9,7 +9,7 @@ export default class ExmapleOfMethods extends Component {
         // }
 
         this.state = {
-            post: []
+            mypost: []
         }
     }
 
@@ -29,20 +29,52 @@ export default class ExmapleOfMethods extends Component {
         }
     }
 
+    async getData(){
+        // let res = await fetch('https://jsonplaceholder.typicode.com/posts')
+        // let data = await res.json()
+        let res = await axios.get('https://jsonplaceholder.typicode.com/posts')
+
+        console.log(res.data);
+        return res.data
+    }
+
     componentDidMount(){
         // convert into async await
-        axios.get('https://jsonplaceholder.typicode.com/posts')
-        .then((res) => {
-            console.log(res.data);
+        // axios.get('https://jsonplaceholder.typicode.com/posts')
+        // .then((res) => {
+        //     console.log(res.data);
+        //     this.setState({
+        //         post: res.data
+        //     })
+        // })
+
+        // fetch('https://jsonplaceholder.typicode.com/posts')
+        // .then((res) => {
+        //     console.log(res);
+        //     return res.json()
+        // })
+        // .then((data) => {
+        //     console.log(data);
+        //     this.setState({
+        //         mypost: data
+        //     })
+        // })
+
+        this.getData()
+        .then((data) => {
             this.setState({
-                post: res.data
+                mypost: data
             })
         })
+
     }
 
     componentDidUpdate(){
 
     }
+
+    arr = [2,5,8,3,7]
+
 
   render() {
     return (
@@ -50,7 +82,12 @@ export default class ExmapleOfMethods extends Component {
       <h2>ExmapleOfMethods</h2>
       <div>Name without title --- Props : {this.props.firstName}</div>
       <div>Name with title --- state: {this.state.fullName}</div>
-      {[1,2,36,777]}
+      {/* {[1,2,36,777]} */}
+
+      {
+          this.arr.filter((el) => el>5)
+      }
+      
      </>
     )
   }

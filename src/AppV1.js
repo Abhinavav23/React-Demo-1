@@ -17,6 +17,7 @@ import LifecycleMethod from './ClassComponents/Lifecycle/Phase2/LifecycleMethod'
 import Component1 from './ClassComponents/Lifecycle/Component1';
 import Component2 from './ClassComponents/Lifecycle/Component2';
 import ExmapleOfMethods from './ClassComponents/Lifecycle/Phase2/ExmapleOfMethods';
+import { UseEffectHook } from './components/Hooks/UseEffect/UseEffectHook';
 
 const AppV1 = () => {
     const [theme, setTheme] = useState(true);
@@ -70,8 +71,10 @@ const AppV1 = () => {
         {/* <Component2/> */}
 
 
-        <ExmapleOfMethods firstName={myName}/>
-        <button onClick={() => setName('Sonu 111')}>update Name</button>
+        {/* <ExmapleOfMethods firstName={myName}/> */}
+        {/* <button onClick={() => setName('Sonu 111')}>update Name</button> */}
+
+        <UseEffectHook/>
       </>
   )
 }
