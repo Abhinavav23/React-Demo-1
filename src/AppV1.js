@@ -74,7 +74,12 @@ const AppV1 = () => {
         {/* <ExmapleOfMethods firstName={myName}/> */}
         {/* <button onClick={() => setName('Sonu 111')}>update Name</button> */}
 
-        <UseEffectHook/>
+        {/* <UseEffectHook/> */}
+
+        {show && <UseEffectHook/>}
+        <br/>
+        <br/>
+        <button onClick={() => setShow(!show)}>toggle</button>
       </>
   )
 }

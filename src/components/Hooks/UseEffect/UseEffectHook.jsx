@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
+import axios from 'axios'
 
 export const UseEffectHook = () => {
 
@@ -6,18 +7,64 @@ export const UseEffectHook = () => {
     const [count2, setCount2]  = useState(10);
     const [count3, setCount3]  = useState(50);
 
+    const NameRef = useRef()
+
+    const [posts, setPosts] = useState([])
+
     // const [role, setCount]  = useState(false);
     // const [userInfo, setCount]  = useState({
     //     name: '',
     //     role: ''
     // });
 
+    async function fetchData(){
+        // await
+
+        // return data
+    }
 
     // componentDidMount
     useEffect(() => {
         // fetch('')
         console.log('useEffect running only once');
-    }, [])
+
+        //  axios.get('https://jsonplaceholder.typicode.com/posts')
+        // .then((res) => {
+        //     console.log(res.data);
+           
+        //     // if(if value is not same){
+        //     //     setPosts(res.data)
+        //     // }
+
+        //     NameRef.current = res.data
+        // })
+        // setPosts('abhinav')
+
+        fetch('https://jsonplaceholder.typicode.com/posts')
+        .then((response) => {
+            return response.json()
+        })
+        .then((data) => {
+            setPosts(data)
+        })
+        .catch(() => {
+
+        })
+        .finally(() => {
+
+        })
+
+        // fetchData()
+        // .then((data) => {
+        //     // setPosts(data)
+        // })
+
+
+    },[])
+
+    function submitForm(){
+
+    }
 
     useEffect(() => {
         // fetch('')
@@ -29,7 +76,12 @@ export const UseEffectHook = () => {
         console.log('useEffect running on counter3');
     }, [count3, count1])
 
-
+    // componentWilUnmount
+    useEffect(() => {
+        return () => {
+            console.log('component Unmounting');
+        }
+    }, [])
 
   return (
    <>
@@ -49,8 +101,9 @@ export const UseEffectHook = () => {
 }
 
 
-// componentDidMount
-// componentDidUpdate
+// componentDidMount ---> creation/mounting
+// componentDidUpdate ---> updating
+// componentWilUnmount ---> unmounting
 
 // useEffect is a combination of mutiple lifecycle methods
 // it takes 2 arguments 
@@ -65,3 +118,16 @@ export const UseEffectHook = () => {
 
 // a
 // const a = 10
+
+
+// arr = [1,2,3]
+
+// arr1 = [1,2,3]
+
+// obj1 = {
+//     name: ''
+// }
+
+// obj2 = {
+//     name: ''
+// }

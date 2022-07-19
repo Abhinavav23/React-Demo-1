@@ -32,10 +32,13 @@ export default class ExmapleOfMethods extends Component {
     async getData(){
         // let res = await fetch('https://jsonplaceholder.typicode.com/posts')
         // let data = await res.json()
-        let res = await axios.get('https://jsonplaceholder.typicode.com/posts')
+        try{
+            let res = await axios.get('https://jsonplaceholder.typicode.com/postsfgfgf')
+        } catch(e){
+            console.log();
+        } finally{
 
-        console.log(res.data);
-        return res.data
+        }
     }
 
     componentDidMount(){
