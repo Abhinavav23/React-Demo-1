@@ -59,7 +59,6 @@ export const UseEffectHook = () => {
         //     // setPosts(data)
         // })
 
-
     },[])
 
     function submitForm(){
@@ -96,6 +95,9 @@ export const UseEffectHook = () => {
     <button onClick={() => setCount3(count3+1)}>+counter</button>
 
     {/* <h2>Count: {count1}</h2> */}
+
+    
+
    </>
   )
 }

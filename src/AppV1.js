@@ -18,6 +18,10 @@ import Component1 from './ClassComponents/Lifecycle/Component1';
 import Component2 from './ClassComponents/Lifecycle/Component2';
 import ExmapleOfMethods from './ClassComponents/Lifecycle/Phase2/ExmapleOfMethods';
 import { UseEffectHook } from './components/Hooks/UseEffect/UseEffectHook';
+import { Person } from './components/Person/Person';
+import { Player } from './components/Person/Player';
+import Team from './components/ErrorBoundry/Team';
+import ErrorBoundry from './components/ErrorBoundry/ErrorBoundry';
 
 const AppV1 = () => {
     const [theme, setTheme] = useState(true);
@@ -76,11 +80,33 @@ const AppV1 = () => {
 
         {/* <UseEffectHook/> */}
 
-        {show && <UseEffectHook/>}
+        {/* {show && <UseEffectHook/>}
         <br/>
         <br/>
-        <button onClick={() => setShow(!show)}>toggle</button>
-      </>
+        <button onClick={() => setShow(!show)}>toggle</button> */}
+
+    <ErrorBoundry>
+      <Team name="Australia"/>
+      <Team name="India"/>
+      <Team name="England"/>
+    </ErrorBoundry>
+
+
+    <ErrorBoundry>
+        <Team name="Australia"/>
+    </ErrorBoundry>
+    <ErrorBoundry>
+        <Team name="India"/>
+    </ErrorBoundry>
+    <ErrorBoundry>
+        <Team name="England"/>
+    </ErrorBoundry>
+    <ErrorBoundry>
+        <Team name="SouthAfrica"/>
+    </ErrorBoundry>
+
+    <Team></Team>
+    </>
   )
 }
 
