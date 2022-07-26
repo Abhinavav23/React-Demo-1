@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {createContext} from 'react'
+import ClassA from './ComponentV2/ContextAPI/ClassComp/ClassA'
 import { CompA } from './ComponentV2/ContextAPI/CompA'
 import { CompB } from './ComponentV2/ContextAPI/CompB'
 import { Post } from './ComponentV2/Loader/Post'
@@ -7,7 +8,7 @@ import { FirstReducer } from './ComponentV2/RecucerHook/firstReducer'
 import { SecondReducer } from './ComponentV2/RecucerHook/SecondReducer'
 import { ThirdReducer } from './ComponentV2/RecucerHook/ThirdReducer'
 
-export const UserContext = React.createContext({name: 'Sachin', role: 'Player'});
+export const UserContext = createContext({name: 'Sachin', role: 'Player'});
 export const AdminContext = React.createContext({name: 'Default VALUE'});
 
 const user = {name: 'Abhinav', role: 'Instructor'}
@@ -23,12 +24,24 @@ export const AppV2 = () => {
     <ThirdReducer/> */}
     <UserContext.Provider value={user}>
         {/* <CompA/> */}
-        <CompB/>
+        {/* <CompB/> */}
+        {/* <ClassA/> */}
     </UserContext.Provider>
 
-    <AdminContext.Provider value={admin}>
+
+    {/* <AdminContext.Provider value={admin}>
     <CompB/>
-    </AdminContext.Provider>
+    </AdminContext.Provider> */}
+
+    <UserContext.Provider value={user}>
+        <AdminContext.Provider value={admin}>
+           
+            <CompA/>
+        </AdminContext.Provider>
+    </UserContext.Provider>
+    <ClassA/>
+
+
     </>
   )
 }
